@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+<h1>Calculate</h1>
+
+<form method="POST" action="/calc">
+    <label for="X">Type X:</label>
+    <input type="number" name="x" id="X">
+    <label for="Y">Type Y:</label>
+    <input type="number" name="y" id="Y">
+    <button type="submit">Calculate</button>
+</form>
+
+<div class="result_container">
+    <p class="result">{{ result }}</p>
+</div>
+
+{% endblock %}

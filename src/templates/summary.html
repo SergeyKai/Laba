@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<table>
+    <tr>
+        <th>Год</th>
+        <th>Минимальная цена</th>
+        <th>Средняя цена</th>
+        <th>Максимальная цена</th>
+    </tr>
+    {% for entry in summary_data %}
+    <tr>
+        <td>{{ entry.Year }}</td>
+        <td>{{ entry.min }}</td>
+        <td>{{ entry.mean }}</td>
+        <td>{{ entry.max }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
